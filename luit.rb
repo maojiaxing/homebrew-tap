@@ -5,8 +5,7 @@ class Luit < Formula
   version "1.0.0"
 
 	def install
-		system "./configure"
-		system "make"
+		system "./configure", "--installprefix=#{prefix}"
 		system "make", "install"
   	end
 
