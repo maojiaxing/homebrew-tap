@@ -8,6 +8,7 @@ class Luit < Formula
 		system "./configure", "--prefix=#{prefix}"
 		system "make"
 		system "make", "install"
+		bin.install_symlink libexec/"luit"
   	end
 
   	test do 
